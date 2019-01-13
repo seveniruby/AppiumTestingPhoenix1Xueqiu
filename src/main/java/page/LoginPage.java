@@ -23,12 +23,24 @@ public class LoginPage extends BasePage {
         find(By.id("md_buttonDefaultPositive")).click();
         return this;
     }
+
+    public MainPage passwordSuccess(String username, String password){
+        find(other).click();
+        find(passwordLogin).click();
+        find(this.username).sendKeys(username);
+        find(this.password).sendKeys(password);
+        find(login).click();
+        return new MainPage();
+    }
+
     public String getMessage(){
         return message;
     }
 
     public ProfilePage gotoProfile(){
-        find(By.id("iv_close")).click();
+        //find(By.id("iv_close")).click();
+        //find(By.id("iv_action_back")).click();
+        find(By.xpath("//*[contains(@resource-id, 'iv_close') or contains(@resource-id, 'iv_action_back')]")).click();
         return new ProfilePage();
     }
 
