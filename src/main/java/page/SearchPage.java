@@ -36,10 +36,10 @@ public class SearchPage extends BasePage{
     public ArrayList<String> addSelected(){
         ArrayList<String> array=new ArrayList<String>();
         AndroidElement select=(AndroidElement) find(By.xpath("//*[contains(@resource-id, 'follow') and contains(@resource-id, '_btn')]"));
-        //array.add(select.getAttribute("content-desc"));
+        array.add(select.getAttribute("resourceId"));
         select.click();
         AndroidElement select2=(AndroidElement)find(By.xpath("//*[contains(@resource-id, 'follow') and contains(@resource-id, '_btn')]"));
-        //array.add(select2.getAttribute("resource-id"));
+        array.add(select2.getAttribute("resourceId"));
         return array;
 
     }
