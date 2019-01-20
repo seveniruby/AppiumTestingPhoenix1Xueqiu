@@ -10,6 +10,7 @@ public class BasePage {
         try{
             return Driver.getCurrentDriver().findElement(locator);
         }catch (Exception e){
+            System.out.println("not found");
             e.printStackTrace();
             Driver.getCurrentDriver().findElement(text("下次再说")).click();
             return Driver.getCurrentDriver().findElement(locator);
