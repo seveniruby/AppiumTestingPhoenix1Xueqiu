@@ -34,6 +34,7 @@ public class SearchPage extends BasePage{
     }
 
     public ArrayList<String> addSelected(){
+        //appium的bug 本来resource-id与resourceId都应该支持，结果只支持了resourceId
         ArrayList<String> array=new ArrayList<String>();
         AndroidElement select=(AndroidElement) find(By.xpath("//*[contains(@resource-id, 'follow') and contains(@resource-id, '_btn')]"));
         array.add(select.getAttribute("resourceId"));
