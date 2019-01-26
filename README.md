@@ -1,1 +1,2 @@
-# AppiumTesting7
+# AppiumTesting
+霍格沃兹测试学院名企定向班第一期app自动化测试实战

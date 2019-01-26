@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -35,6 +36,7 @@ public class SearchTest {
         assertThat(content, equalTo(name));
     }
 
+    
     @ParameterizedTest
     @CsvFileSource(resources = "/data/SearchTest.csv")
     void 选择(String keyword){
